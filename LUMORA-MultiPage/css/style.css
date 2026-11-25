@@ -1,0 +1,244 @@
+/* ===== LUMORA - style.css ===== */
+
+/* Smooth scrolling when clicking navbar links */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #212529;
+}
+
+/* Offset so headings are not hidden under the sticky navbar */
+section,
+footer {
+  scroll-margin-top: 70px;
+}
+
+/* ---------- Colours ---------- */
+.bg-navy {
+  background-color: #0b1034;
+}
+
+.bg-navy-light {
+  background-color: #141a4a;
+}
+
+.text-purple {
+  color: #a78bfa;
+}
+
+.light-section {
+  background-color: #f4f2fb;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background-color: #0b1034;
+  border-bottom: 2px solid #6d4aff;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: white;
+}
+
+.navbar .nav-link {
+  color: #d9d9ef;
+}
+
+.navbar .nav-link:hover {
+  color: #a78bfa;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  /* background: linear-gradient(#0b1034, #1e1b6b); */
+  background-image: url('../images/gradients.sh.png');
+  color: white;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hero-image-column {
+  display: flex;
+  align-items: center;
+  animation-name: float;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes float {
+  from {
+    transform: translateY(10);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+.hero-dashboard {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  /* border: 2px solid #6d4aff; */
+}
+
+@media (min-width: 992px) {
+  .hero-dashboard {
+    width: 112%;
+    margin-left: -6%;
+  }
+}
+
+/* ---------- Buttons ---------- */
+.btn-purple {
+  background-color: #6d4aff;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 28px;
+}
+
+.btn-purple:hover {
+  background-color: #ffffff;
+  color: #6d4aff;
+  border: 2px solid #6d4aff;
+}
+
+.btn-outline-purple {
+  border: 2px solid #6d4aff;
+  color: #6d4aff;
+  border-radius: 30px;
+}
+
+.btn-outline-purple:hover {
+  background-color: #6d4aff;
+  color: white;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(109, 74, 255, 0.3);
+}
+
+.icon {
+  font-size: 36px;
+}
+
+/* Dark cards (problem + community sections) */
+.dark-card {
+  background-color: #141a4a;
+  color: white;
+  border: 1px solid #3a3f8f;
+}
+
+/* Solution features */
+.feature-box {
+  border-left: 4px solid #6d4aff;
+  background-color: #141a4a;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+/* Lecture cards */
+.lecture-img {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ---------- Final CTA ---------- */
+.cta {
+  background-color: #0b1034;
+  color: white;
+  padding: 70px 0;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #070a22;
+  color: #c9c9e0;
+  padding: 50px 0 20px 0;
+}
+
+footer a {
+  color: #c9c9e0;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #a78bfa;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* ===== Extra styles for multi-page version ===== */
+
+/* Page title bar at the top of inner pages */
+.page-header {
+  background: linear-gradient(#0b1034, #1e1b6b);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* White box that holds login / register / contact forms */
+.form-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Login / Register button in the navbar */
+.btn-nav {
+  border: 2px solid #a78bfa;
+  color: white;
+  border-radius: 30px;
+  padding: 2px 14px;
+}
+
+.btn-nav:hover {
+  background-color: #6d4aff;
+  color: white;
+}
+
+/* Active page link in the navbar */
+.navbar .nav-link.active {
+  color: #a78bfa;
+  font-weight: bold;
+}
+
+/* FAQ boxes (details tag works without JavaScript) */
+details {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
